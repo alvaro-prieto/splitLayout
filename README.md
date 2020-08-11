@@ -14,7 +14,7 @@ The following concepts have been used to put the concept into practice:
 
 - Extensive use of modifier keys (L1, L2, L3, L4 and a contextual modifier: the App layer). These modifiers allow you to stack different symbols on the same key.
 
-- Usage of double keystrokes to write associated or alternative symbols.
+- Usage of double keystrokes to write associated or alternative symbols (marked with a triangle ▲) 
 
 - Usage of a contextual modifier: App Layer, which allows some keys to have specific behaviors in each program, something very useful for personalized keyboard shortcuts.
 
