@@ -1,6 +1,6 @@
 # Spanish developer layout ( Karabiner + Goku )
 ### ISO ES Win to Mac, for split keyboards (based on [R-go Split](https://www.r-go-tools.com/products/ergonomic-keyboards/r-go-split/) )
-[🇬🇧 Brief description](#Description)   [🇪🇸 Descripción en castellano](#Descripción)
+[🇬🇧 Brief description](#Description)   [🇪🇸 Descripción en castellano](#Descripción)   [⬇️ Descarga](#Descarga) 
 
 <img src="img/splitLayout_v114.png" width="100%"/>
 
@@ -48,6 +48,8 @@ Los siguientes conceptos se han utilizado para ponerlo en práctica:
 - Uso de un mapa visual como ayuda mnemotécnica
 
 
-[Tenting](https://github.com/adereth/ergodox-tent)
+## ⬇️ Descarga
+
+hola
 
 
