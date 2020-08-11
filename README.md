@@ -48,8 +48,13 @@ Los siguientes conceptos se han utilizado para ponerlo en práctica:
 - Uso de un mapa visual como ayuda mnemotécnica
 
 
-##Descarga
+## ⬇️ Descarga
 
-hola
+Para utilizar esta distribución de teclado es necesario utilizar [Karabiner](https://karabiner-elements.pqrs.org/), (únicamente compatible con macOS). La configuración actual está ideada para un teclado [R-Go Split](https://www.r-go-tools.com/products/ergonomic-keyboards/r-go-split/qwerty-es-black-wired/) en distribución ISO ES, pero si te interesa puedes adaptarla a otros teclados adaptando el "devices" del código fuente. También tendrás que adaptar los identificadores de "location_id" correspondientes a la parte izquierda y derecha de tu teclado, los cuales podrás averiguar utilizando la herramienta EventViewer incluida en Karabiner. 
+
+- Descargar configuración para Karabiner. Ubicar el archivo en /Users/tu_usuario/.config/karabiner
+- Descargar código fuente (en sintaxis Goku). Ubicar el archivo en /Users/tu_usuario/.config/   y utilizar el comando goku para transpilarlo a un archivo de configuración válido
+
+
 
 
