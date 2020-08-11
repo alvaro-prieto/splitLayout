@@ -18,9 +18,12 @@ The following concepts have been used to put the concept into practice:
 
 - Usage of a contextual modifier: App Layer, which allows some keys to have specific behaviors in each program, something very useful for personalized keyboard shortcuts.
 
+- Usage of textured keycaps in the modifiers to facilitate their location by touch
+
 - Optimized for the Spanish language
 
 - Usage of a visual layout as a mnemonic aid
+
 
 ## Descripción
 https://www.ergodox.io
