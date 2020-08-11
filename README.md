@@ -5,7 +5,7 @@
 <img src="img/splitLayout_v114.png" width="100%"/>
 
 
-## Description
+## 🇬🇧 Description
 
 A repetitive strain injury (RSI) is an injury to part of the musculoskeletal or nervous system caused by repetitive use, vibrations, compression or long periods in a fixed position. This keyboard layout has been designed to minimize postural problems associated with the placement of certain keys and symbols commonly used by software developers. To achieve this, it has been attempted to reduce the useful area of the keyboard to the minimum, placing the symbols in positions close to the strongest fingers (such as thumb and index fingers).
 
@@ -27,7 +27,7 @@ The following concepts have been used to put the concept into practice:
 
 
 
-## Descripción
+## 🇪🇸 Descripción
 
 El layout propuesto se 
 [Tenting](https://github.com/adereth/ergodox-tent)
