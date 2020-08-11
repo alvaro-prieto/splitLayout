@@ -94,8 +94,10 @@
                 }]
 
                 ;;--------- L1 LEFT HALF -----------
-                ;; Q | close window
-                [ :##q :!Cw  [["L1" 1] ["L2" 0] ["L3" 0]  ["L4" 0]] ]
+                ;; Q | quit app
+                [ :##q :!Cq  [["L1" 1] ["L2" 0] ["L3" 0]  ["L4" 0]] ]
+                ;; W | close window
+                [ :##w :!Cw  [["L1" 1] ["L2" 0] ["L3" 0]  ["L4" 0]] ]
                 ;; F | next app
                 [ :##f  [:!Ctab ] ["L1" 1] ] 
                 ;; D | prev app

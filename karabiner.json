@@ -351,6 +351,35 @@
             }
           },
           "to" : [ {
+            "key_code" : "q",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "L1",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "L2",
+            "value" : 0,
+            "type" : "variable_if"
+          }, {
+            "name" : "L3",
+            "value" : 0,
+            "type" : "variable_if"
+          }, {
+            "name" : "L4",
+            "value" : 0,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
             "key_code" : "w",
             "modifiers" : [ "left_command" ]
           } ],
