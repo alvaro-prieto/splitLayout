@@ -2,7 +2,7 @@
 ### ISO ES Win to Mac, for split keyboards (based on [R-go Split](https://www.r-go-tools.com/products/ergonomic-keyboards/r-go-split/) )
 [🇬🇧 Brief description](#Description)   [🇪🇸 Descripción en castellano](#Descripción)   [⬇️ Descarga](#Descarga) 
 
-<img src="img/splitLayout_v114.png" width="100%"/>
+<img src="splitLayout_v114.png" width="100%"/>
 
 
 ## 🇬🇧 Description
@@ -37,7 +37,7 @@ Los siguientes conceptos se han utilizado para ponerlo en práctica:
 
 - Uso extensivo de teclas modificadoras (L1, L2, L3, L4 y un modificador contextual: la capa de la aplicación). Estos modificadores le permiten apilar diferentes símbolos en la misma tecla.
 
-- Uso de pulsaciones dobles para escribir símbolos complementarios o alternativos (marcados con un triángulo ▲)
+- Uso de pulsaciones dobles para escribir símbolos complementarios o alternativos (marcados con ▲)
 
 - Uso de un modificador contextual: la capa de aplicación, que permite que algunas teclas tengan comportamientos específicos en cada programa, algo muy útil para atajos de teclado personalizados.
 
