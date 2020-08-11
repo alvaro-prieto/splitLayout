@@ -330,6 +330,8 @@
                 ;;--------- GOOGLE CHROME -----------
                 ; i | inspector 
                 [ :##i :!CSc [["APP" 1] :Chromes] ]
+                ; o | toggle console 
+                [ :##o :!COj [["APP" 1] :Chromes] ]
                 ; h | historial    
                 [ :##h :!Cy [["APP" 1] :Chromes] ] 
                 ; d | descargas
