@@ -10,7 +10,7 @@ A repetitive strain injury (RSI) is an injury to part of the musculoskeletal or 
 
 The following concepts have been used to put the concept into practice:
 
-- Usage of a divided keyboard to improve the separation between both hands, placing them parallel to the shoulders. At the same time this makes it possible to use the space bar as two different keys.
+- Usage of a [split keyboard](https://www.r-go-tools.com/products/ergonomic-keyboards/r-go-split/) to improve the separation between both hands, placing them parallel to the shoulders. At the same time this makes it possible to use the space bar as two different keys.
 
 - Extensive use of modifier keys (L1, L2, L3, L4 and a contextual modifier: the App layer). These modifiers allow you to stack different symbols on the same key.
 
