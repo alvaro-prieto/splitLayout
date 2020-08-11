@@ -17,7 +17,7 @@ The following concepts have been used to put it into practice:
 
 - Usage of double keystrokes to write complementary or alternative symbols (marked with a triangle ▲) 
 
-- Usage of a contextual modifier: App Layer, which allows some keys to have specific behaviors in each program, something very useful for personalized keyboard shortcuts.
+- Usage of a contextual modifier: App Layer, which allows some keys to have specific behaviors in each program, something very useful for personalized per-app keyboard shortcuts.
 
 - Usage of textured keycaps in the modifiers to facilitate their location by touch
 
