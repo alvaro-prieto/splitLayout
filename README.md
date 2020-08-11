@@ -48,7 +48,7 @@ Los siguientes conceptos se han utilizado para ponerlo en práctica:
 - Uso de un mapa visual como ayuda mnemotécnica
 
 
-## ⬇️ Descarga
+##Descarga
 
 hola
 
