@@ -1,6 +1,5 @@
 # Spanish developer layout ( Karabiner + Goku )
 ### ISO ES Win to Mac, for split keyboards (based on [R-go Split](https://www.r-go-tools.com/products/ergonomic-keyboards/r-go-split/) )
-[🇬🇧 Brief description](#Description)   [🇪🇸 Descripción en castellano](#Descripción)   [⬇️ Descarga](#Descarga) 
 
 <img src="splitLayout_v114.png" width="100%"/>
 
