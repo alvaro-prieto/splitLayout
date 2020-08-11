@@ -11,8 +11,7 @@
     - [Forums](#forums)
 
 ## Description
-https://www.ergodox.io
-[Tenting](https://github.com/adereth/ergodox-tent)
+A repetitive strain injury (RSI) is an injury to part of the musculoskeletal or nervous system caused by repetitive use, vibrations, compression or long periods in a fixed position.
 
 ## Descripción
 https://www.ergodox.io
