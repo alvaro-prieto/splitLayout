@@ -1,7 +1,7 @@
 # Spanish developer layout
 #### ISO ES Win to Mac, for split keyboards (based on [R-go Split](https://www.r-go-tools.com/products/ergonomic-keyboards/r-go-split/) )
 
-<img src="img/splitLayout_v114.jpg" width="400px"/>
+<img src="img/splitLayout_v114.png" width="100%"/>
 
 ## Contents
 
