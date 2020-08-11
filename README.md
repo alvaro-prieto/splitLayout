@@ -33,19 +33,19 @@ Esta distribución de teclado ha sido diseñada para minimizar los problemas pos
 
 Los siguientes conceptos se han utilizado para ponerlo en práctica:
 
--;Utilización de un teclado dividido para mejorar la separación entre ambas manos, colocándolas paralelas a los hombros. Al mismo tiempo, esto permite utilizar la barra espaciadora como dos teclas diferentes.
+- Utilización de un [teclado dividido](https://www.r-go-tools.com/products/ergonomic-keyboards/r-go-split/qwerty-es-black-wired/) para mejorar la separación entre ambas manos, permitiendo su colocación paralela con respecto a los hombros. Al mismo tiempo, esto permite utilizar la barra espaciadora como dos teclas diferentes.
 
 - Uso extensivo de teclas modificadoras (L1, L2, L3, L4 y un modificador contextual: la capa de la aplicación). Estos modificadores le permiten apilar diferentes símbolos en la misma tecla.
 
-- Uso de pulsaciones dobles de teclas para escribir símbolos asociados o alternativos (marcados con un triángulo ▲)
+- Uso de pulsaciones dobles para escribir símbolos complementarios o alternativos (marcados con un triángulo ▲)
 
-- Uso de un modificador contextual: App Layer, que permite que algunas teclas tengan comportamientos específicos en cada programa, algo muy útil para atajos de teclado personalizados.
+- Uso de un modificador contextual: la capa de aplicación, que permite que algunas teclas tengan comportamientos específicos en cada programa, algo muy útil para atajos de teclado personalizados.
 
 - Uso de teclas con textura en los modificadores para facilitar su ubicación táctil
 
 - Optimizado para el idioma español
 
-- Uso de un diseño visual como ayuda mnemotécnica
+- Uso de un mapa visual como ayuda mnemotécnica
 
 
 [Tenting](https://github.com/adereth/ergodox-tent)
