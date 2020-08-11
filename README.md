@@ -29,7 +29,25 @@ The following concepts have been used to put the concept into practice:
 
 ## 🇪🇸 Descripción
 
-El layout propuesto se 
+Esta distribución de teclado ha sido diseñada para minimizar los problemas posturales asociados con la ubicación de ciertas teclas y símbolos comúnmente utilizados por los desarrolladores de software. Para lograrlo, se ha intentado reducir al mínimo el área útil del teclado, colocando los símbolos en posiciones cercanas a los dedos más fuertes (como los dedos pulgar e índice).
+
+Los siguientes conceptos se han utilizado para ponerlo en práctica:
+
+-;Utilización de un teclado dividido para mejorar la separación entre ambas manos, colocándolas paralelas a los hombros. Al mismo tiempo, esto permite utilizar la barra espaciadora como dos teclas diferentes.
+
+- Uso extensivo de teclas modificadoras (L1, L2, L3, L4 y un modificador contextual: la capa de la aplicación). Estos modificadores le permiten apilar diferentes símbolos en la misma tecla.
+
+- Uso de pulsaciones dobles de teclas para escribir símbolos asociados o alternativos (marcados con un triángulo ▲)
+
+- Uso de un modificador contextual: App Layer, que permite que algunas teclas tengan comportamientos específicos en cada programa, algo muy útil para atajos de teclado personalizados.
+
+- Uso de teclas con textura en los modificadores para facilitar su ubicación táctil
+
+- Optimizado para el idioma español
+
+- Uso de un diseño visual como ayuda mnemotécnica
+
+
 [Tenting](https://github.com/adereth/ergodox-tent)
 
 
