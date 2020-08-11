@@ -11,7 +11,7 @@
     - [Forums](#forums)
 
 ## Description
-A repetitive strain injury (RSI) is an injury to part of the musculoskeletal or nervous system caused by repetitive use, vibrations, compression or long periods in a fixed position.
+A repetitive strain injury (RSI) is an injury to part of the musculoskeletal or nervous system caused by repetitive use, vibrations, compression or long periods in a fixed position. This keyboard layout has been designed to minimize postural problems associated with the placement of certain keys and symbols commonly used by software developers. To achieve this, an attempt has been made to reduce the usable area of the keyboard to a minimum, placing the symbols in positions close to the most muscular fingers.
 
 ## Descripción
 https://www.ergodox.io
