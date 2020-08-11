@@ -1,0 +1,432 @@
+;; Spanish developer layout for split keyboards V: 1.14   (iso ES Win to Mac, based in R-go Split keyboard)
+;; Virtual keyboard  --> Country Code -->  1
+
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
+
+{:profiles {
+
+    :Dev { :default true :sim 50 :delay 250 :alone 250 :held 250 }} 
+    :tos {}
+	:modifiers {
+        :ro :right_option
+    }
+	:templates {
+		:launch      "osascript -e 'tell application \"Alfred 4\" to run trigger \"launch%s\" in workflow \"yqrashawn.workflow.launcher\" with argument \"\"'"
+		:alf         "open /Applications/Alfred\\ 4.app && osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\"'"
+		:km          "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
+		:kb-maestro  "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
+		:open        "open \"%s\""
+		:show        "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'\n"
+		:toggle      "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else if frontmost of process appName then\n    set visible of process appName to false\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'"
+		:type        "osascript -e 'tell application \"System Events\" to keystroke \"%s\" as text'"
+	}
+	:simlayers {}
+
+	:main  [
+ 
+
+        {:des "========= LAYER 0 (DEFAULT) =========="
+            :rules [
+
+                ;;Left shift alone | word left
+                [ :##left_shift :left_shift [["L2" 0] ["L4" 0]] { :alone :!Oleft_arrow }]
+                ;;Right shift alone | word right
+                [ :##right_shift :right_shift [["L2" 0] ["L4" 0]] { :alone :!Oright_arrow }]
+                ;;Right control alone | turn off screen
+                [ :##right_control :right_control [["L2" 0] ["L3" 0] ["L4" 0]] { :alone :!TSeject }]
+                ;; ^ | delete
+                [ :##open_bracket :delete_or_backspace [ ["L2" 0] ["L3" 0] ["L4" 0] :rgo-split] ]
+                ;; º | \
+                [ :##grave_accent_and_tilde :!Ograve_accent_and_tilde [ ["L2" 0] ["L3" 0] ["L4" 0] :rgo-split]  ]
+                ;; left_control | left_command
+                [ :##left_control :left_command :rgo-split { :alone [:!Cspacebar] }]
+                ;; left_command | left_option
+                [ :##left_command :left_option :rgo-split ] 
+                ;; Tab | shift tab
+                [ :##tab :!Stab [ ["L2" 0] ["L4" 0] :rgo-split] ]   
+                ;; ç | caps_lock (hold down delay needed for caps_lock in OSX)
+                [ :##backslash {:key :caps_lock :hold_down_ms 100 } :rgo-split ]   
+             
+
+                ;;--------- FUNCTION KEYS -----------
+                ;; F2 | brightness -
+                [ :f2 :display_brightness_decrement nil ] 
+                ;; F3 | brightness +
+                [ :f3 :display_brightness_increment nil ] 
+                ;; F5 | mute
+                [ :f5 :mute nil ] 
+                ;; F6 | volume -
+                [ :f6 :volume_decrement nil ] 
+                ;; F7 | volume +
+                [ :f7 :volume_increment nil ] 
+                ;; F8 | play / pause
+                [ :f8 :play_or_pause nil ] 
+                ;; F9 | rewind
+                [ :f9 :rewind nil ] 
+                ;; F10 | fast forward
+                [ :f10 :fastforward nil ] 
+                ;; IMP | print screen
+                [ :print_screen :!CTS4 nil ] 
+            
+            ]
+        }
+
+
+        {:des "========= LAYER 1 (RED) =========="
+            :rules [
+
+                ;;--------- LAYER ACTIVATOR | caps_lock | 1 tap: tab -----------
+                [:##caps_lock ["L1" 1] [:rgo-split] {
+                    :afterup ["L1" 0]
+                    :alone :tab
+                }]
+
+                ;;--------- L1 LEFT HALF -----------
+                ;; Q | close window
+                [ :##q :!Cw  [["L1" 1] ["L2" 0] ["L3" 0]  ["L4" 0]] ]
+                ;; F | next app
+                [ :##f  [:!Ctab ] ["L1" 1] ] 
+                ;; D | prev app
+                [ :##d [:!SCtab ] ["L1" 1] ] 
+                ;; B | cmd + b
+                [ :##b [:!Cb ] ["L1" 1] ] 
+
+
+                ;;--------- L1 RIGHT HALF -----------
+                ;; Right spacebar |  0
+                [ :spacebar :0 [ :rgo-right ["L1" 1] ["L3" 0] ] ]
+                ;; Y | 7
+                [ :##y [:7 ] ["L1" 1] ] 
+                ;; U | 8
+                [ :##u [:8 ] ["L1" 1] ]
+                ;; I | 9
+                [ :##i [:9 ] ["L1" 1] ] 
+                ;; H | 4
+                [ :##h [:4 ] ["L1" 1] ] 
+                ;; J | 5
+                [ :##j [:5 ] ["L1" 1] ] 
+                ;; K | 6
+                [ :##k [:6 ] ["L1" 1] ] 
+                ;; N | 1
+                [ :##n [:1 ] ["L1" 1] ] 
+                ;; M | 2
+                [ :##m [:2 ] ["L1" 1] ] 
+                ;; , | 3
+                [ :##comma [:3 ] ["L1" 1] ] 
+           										
+            ]
+        }
+
+        {:des "========= LAYER 2 (GREEN) =========="
+            :rules [
+
+                ;;--------- LAYER ACTIVATOR | left_option | 1 tap: ;  2 tap: : -----------
+                ;; 2 tap | :
+                [ :left_option [ :delete_or_backspace :!Speriod ["L2_activator" 0] ] [ ["L3" 0] ["L4" 0] ["L2_activator" 1]] ] 
+                ;; 1 tap | ;
+                [:##left_option [ ["L2" 1] ["L2_activator" 1] ] :rgo-split {
+                    :afterup ["L2" 0]
+                    :alone :!Scomma
+                    :delayed { :invoked  ["L2_activator" 0] :canceled ["L2_activator" 0]}
+                }]
+                
+                ;;--------- L2 LEFT HALF -----------
+                ;; < | redo
+                [ :##non_us_backslash  [:!CSz ] ["L2" 1] ]
+                ;; B | paste without format
+                [ :##b [:!OSCv ] ["L2" 1] ]     
+                ;; default + cmd            
+                [ :##q :!Cq ["L2" 1] ]
+                [ :##w :!Cw ["L2" 1] ] 
+                [ :##e :!Ce ["L2" 1] ] 
+                [ :##r :!Cr ["L2" 1] ] 
+                [ :##t :!Ct ["L2" 1] ] 
+                [ :##a :!Ca ["L2" 1] ] 
+                [ :##s :!Cs ["L2" 1] ] 
+                [ :##d :!Cd ["L2" 1] ] 
+                [ :##f :!Cf ["L2" 1] ] 
+                [ :##g :!Cg ["L2" 1] ]             
+                [ :##z :!Cz ["L2" 1] ] 
+                [ :##x :!Cx ["L2" 1] ] 
+                [ :##c :!Cc ["L2" 1] ] 
+                [ :##v :!Cv ["L2" 1] ]                       
+
+                ;;--------- L2 RIGHT HALF -----------
+                ;; Right spacebar (L3) | delete
+                [ :spacebar  :delete_or_backspace [ :rgo-right ["L2" 1] ["L4" 0] ] ]
+                ;; Right option (L4) | supr
+                [ :right_option  :delete_forward [ :rgo-right ["L2" 1] ["L4" 0] ] ]
+                ;; Delete | supr
+                [ :delete_or_backspace  :delete_forward [ :rgo-right ["L2" 1] ] ]  
+                ;; Enter | page jump  
+                [ :##return_or_enter [:!Creturn_or_enter ] ["L2" 1] ]
+                ;; ^ | supr
+                [ :##open_bracket :delete_forward ["L2" 1] ]
+                ;; arrows
+                [ :##i :up_arrow [["L2" 1] ["L3" 0] ["L4" 0]] ]
+                [ :##j :left_arrow [["L2" 1] ["L3" 0] ["L4" 0]] ] 
+                [ :##k :down_arrow [["L2" 1] ["L3" 0] ["L4" 0]] ] 
+                [ :##l :right_arrow [["L2" 1] ["L3" 0] ["L4" 0]] ]  
+                ;; y 2 tap | ¡!
+                [ :##y  [ :equal_sign :!S1 :left_arrow  ["L2_y" 0]]  [["L2" 1]["L2_y" 1]] ] 
+                ;; y 1 tap | !
+                [ :##y ["L2_y" 1] [["L2" 1]["L2_y" 0]] { :delayed { :invoked  [:!S1 ["L2_y" 0]] :canceled ["L2_y" 0]} } ]
+                ;; u 2 tap | ¡!
+                [ :##u  [ :!Sequal_sign :!Shyphen :left_arrow  ["L2_u" 0]]  [["L2" 1]["L2_u" 1]] ] 
+                ;; u 1 tap | !
+                [ :##u ["L2_u" 1] [["L2" 1]["L2_u" 0]] { :delayed { :invoked  [:!Shyphen ["L2_u" 0]] :canceled ["L2_u" 0]} } ]            
+                ;; h | $
+                [ :##h :!S4  ["L2" 1] ] 
+                ;; ñ | ~
+                [ :##semicolon :!Osemicolon ["L2" 1] ]
+                ;; ´ | ¨
+                [ :##quote :!Squote ["L2" 1] ]    
+                ;; n | "
+                [ :##n :!S2 ["L2" 1] ]    
+                ;; m | '
+                [ :##m :hyphen ["L2" 1] ]    
+                ;; , | `
+                [ :##comma :open_bracket ["L2" 1] ]    
+                ;; right control | lock screen
+                [ :right_control :!CTq  ["L2" 1] ]
+            ]
+        }
+
+
+        {:des "========= LAYER 3 (BLUE) =========="
+            :rules [
+                ;;--------- LAYER ACTIVATOR | right spacebar | 1 tap: enter -----------
+                [ :##spacebar ["L3" 1] [:rgo-right ["L1" 0] ]{
+                    :afterup ["L3" 0]
+                    :alone :return_or_enter
+                }]
+
+                ;;--------- L3 LEFT HALF -----------
+                ;; \ | °
+                [ :##grave_accent_and_tilde :grave_accent_and_tilde  [["L3" 1] ["L4" 0]] ]
+                ;; e | €
+                [ :##e :!Oe  [["L3" 1] ["L2" 0] ["L4" 0]] ]
+                ;; a | @
+                [ :##a :!O2  [["L3" 1] ["L2" 0] ["L4" 0]] ]
+
+                ;; r 2 tap | > 
+                [ :##r  [ :!Snon_us_backslash ["L3_r" 0]]  [["L3" 1]["L3_r" 1]] ] 
+                ;; r 1 tap | <
+                [ :##r ["L3_r" 1]  [["L3" 1]["L3_r" 0]] { :delayed { :invoked  [:non_us_backslash ["L3_r" 0]] :canceled ["L3_r" 0]} } ]
+                ;; t 2 tap | }
+                [ :##t  [ :!Onon_us_pound ["L3_t" 0]]  [["L3" 1]["L3_t" 1]] ] 
+                ;; t 1 tap | {
+                [ :##t ["L3_t" 1]  [["L3" 1]["L3_t" 0]] { :delayed { :invoked  [:!Oquote ["L3_t" 0]] :canceled ["L3_t" 0]} } ]
+                ;; f 2 tap | )
+                [ :##f  [ :!S9 ["L3_f" 0]]  [["L3" 1]["L3_f" 1]] ] 
+                ;; f 1 tap | (
+                [ :##f ["L3_f" 1]  [["L3" 1]["L3_f" 0]] { :delayed { :invoked  [:!S8 ["L3_f" 0]] :canceled ["L3_f" 0]} } ]
+                ;; g 2 tap | )
+                [ :##g [ :!Oclose_bracket  ["L3_g" 0]]  [["L3" 1]["L3_g" 1]] ] 
+                ;; g 1 tap | (
+                [ :##g ["L3_g" 1]  [["L3" 1]["L3_g" 0]] { :delayed { :invoked  [:!Oopen_bracket  ["L3_g" 0]] :canceled ["L3_g" 0]} } ]
+                ;; c 2 tap | >=
+                [ :##c [ :!Snon_us_backslash :!S0 ["L3_c" 0]]  [["L3" 1]["L3_c" 1]] ] 
+                ;; c 1 tap | <=
+                [ :##c ["L3_c" 1]  [["L3" 1]["L3_c" 0]] { :delayed { :invoked  [:non_us_backslash :!S0   ["L3_c" 0]] :canceled ["L3_c" 0]} } ]
+                ;; v 2 tap | ==
+                [ :##v [ :!S0 :!S0 ["L3_v" 0]]  [["L3" 1]["L3_v" 1]] ] 
+                ;; v 1 tap | !=
+                [ :##v ["L3_v" 1]  [["L3" 1]["L3_v" 0]] { :delayed { :invoked  [:!S1 :!S0  ["L3_v" 0]] :canceled ["L3_v" 0]} } ]
+                ;; b 2 tap | ->
+                [ :##b [ :slash  :!Snon_us_backslash  ["L3_b" 0]]  [["L3" 1]["L3_b" 1]] ] 
+                ;; b 1 tap | =>
+                [ :##b ["L3_b" 1]  [["L3" 1]["L3_b" 0]] { :delayed { :invoked  [:!S0 :!Snon_us_backslash ["L3_b" 0]] :canceled ["L3_b" 0]} } ]
+
+                ;;--------- L3 RIGHT HALF -----------
+                ;; i | page up
+                [ :##i :page_up  ["L3" 1] ]
+                ;; j | row start
+                [ :##j :!Cleft_arrow  ["L3" 1] ]
+                ;; k | page down
+                [ :##k :page_down  ["L3" 1] ]
+                ;; l | row end
+                [ :##l :!Cright_arrow  ["L3" 1] ]
+                ;; n | show desktop
+                [ :##n :!CSmission_control  ["L3" 1] ]
+                ;; m | minimize window
+                [ :##m :!Cm  ["L3" 1] ]
+                ;; right control | restart
+                [ :right_control :!CTeject  ["L3" 1] ]
+ 
+            ]
+        }
+
+        {:des "========= LAYER 4 (PURPLE) =========="
+            :rules [
+
+                ;;--------- LAYER ACTIVATOR | right option | 1 tap: = -----------
+                [:##right_option ["L4" 1] [ :rgo-split ["L2" 0] ] {
+                    :afterup ["L4" 0]
+                    :alone :!S0
+                }]
+
+                ;;--------- L4 LEFT HALF -----------
+                ;; \ | ª 
+                [ :##grave_accent_and_tilde :!Sgrave_accent_and_tilde  [["L4" 1] ["L3" 0]] ]
+                ;; e | \
+                [ :##e :!Ograve_accent_and_tilde ["L4" 1]  ]
+                ;; r | *
+                [ :##r :!Sclose_bracket ["L4" 1]  ]
+                ;; t | /
+                [ :##t :!S7 ["L4" 1]  ]
+                ;; s | %
+                [ :##s :!S5 ["L4" 1]  ]
+                ;; d | _
+                [ :##d :!Sslash ["L4" 1]  ]
+                ;; f | +
+                [ :##f :close_bracket ["L4" 1]  ]
+                ;; g | -
+                [ :##g :slash ["L4" 1]  ]
+                ;; c | &
+                [ :##c :!S6 ["L4" 1]  ]
+                ;; v | |
+                [ :##v :!O1 ["L4" 1]  ]
+                ;; b | #
+                [ :##b :!O3 ["L4" 1]  ]
+
+                ;;--------- L4 RIGHT HALF -----------
+                ;; ` | ^
+                [ :open_bracket :!Sopen_bracket ["L4" 1] ]
+                ;; ´ | ·
+                [ :##quote :!S3 ["L4" 1] ]
+                ;; , | ini
+                [ :##comma :!Cup_arrow ["L4" 1] ] 
+                ;; . | fin
+                [ :##period :!Cdown_arrow ["L4" 1] ]
+                ;; right control | shutdown
+                [ :##right_control :!TOCeject ["L4" 1] ] 
+          
+            ]
+        }
+
+
+        {:des "========= APP LAYER (YELLOW) =========="
+            :rules [
+
+                ;;--------- LAYER ACTIVATOR | <  -----------
+                [:##non_us_backslash ["APP" 1] [["L4" 0]["L2" 0]["L1" 0] :rgo-split] {
+                    :afterup ["APP" 0]
+                    :alone :vk_none
+                }]
+
+                ;;--------- GOOGLE CHROME -----------
+                ; i | inspector 
+                [ :##i :!CSc [["APP" 1] :Chromes] ]
+                ; h | historial    
+                [ :##h :!Cy [["APP" 1] :Chromes] ] 
+                ; d | descargas
+                [ :##d :!CSj [["APP" 1] :Chromes] ] 
+                ; z | prev tab 
+                [ :##z :!COleft_arrow [["APP" 1] :Chromes] ] 
+                ; x | next tab 
+                [:##x :!COright_arrow [["APP" 1] :Chromes] ]
+                ; n | new window
+                [:##n :!Cn [["APP" 1] :Chromes] ]
+                ; t | new tab
+                [:##t :!Ct [["APP" 1] :Chromes] ]
+                ; r | undo close
+                [:##r :!CSt [["APP" 1] :Chromes] ] 
+                ; p | private
+                [:##p :!CSn [["APP" 1] :Chromes] ]
+                ; c | close tab     
+                [:##c :!Cw [["APP" 1] :Chromes] ]
+                ; a | actualizar 
+                [ :##a :!CSr [["APP" 1] :Chromes] ]
+
+                ;;--------- DEBUGGERS -----------
+                ;; j | step
+                [:##j :f9 [["APP" 1] :Debuggers]]
+                ;; k | step over
+                [:##k :f10 [["APP" 1] :Debuggers]]
+                ;; step in
+                [:##m :!Csemicolon [["APP" 1] :Debuggers]]
+                ;; step out
+                [:##u :!CSsemicolon [["APP" 1] :Debuggers]]
+                ;; pause/resume
+                [:##l :!Cbackslash [["APP" 1] :Debuggers]]    
+                ;; de/activate breakpoints
+                [:##b :!Cf8 [["APP" 1] :Debuggers]]
+
+                ;;--------- DESIGN -----------
+                ;; v | paste in place
+                [:##v :!CSv [["APP" 1] :Design]]
+
+                ;;--------- ANIMATE -----------
+                ;; b | break apart
+                [:##b :!Cb [["APP" 1] :Animate]]
+            ]
+        }  
+
+	]
+
+
+	:devices {
+		:macbook [{:product_id 631 :vendor_id 1452}]
+        :rgo-split [{:product_id 8584 :vendor_id 2321}]
+        :rgo-left [{:product_id 8584 :vendor_id 2321 :location_id 336789504}]
+        :rgo-right [{:product_id 8584 :vendor_id 2321 :location_id 336736256}]
+	}
+
+	:applications {
+		:Chromes  [
+			"^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$"
+		]
+		:Firefoxes  [
+			"^org\\.mozilla\\.firefox$"
+			"^org\\.mozilla\\.firefoxdeveloperedition$"
+		]
+		:Terminals  [
+			"^com\\.apple\\.Terminal$"
+		]
+		:Finder  [
+			"^com\\.apple\\.finder$"
+		]
+		:Debuggers  [
+			"^org\\.mozilla\\.firefox$"
+			"^org\\.mozilla\\.firefoxdeveloperedition$"
+			"^com\\.google\\.Chrome$"
+			"^org\\.chromium\\.Chromium$"
+			"^com\\.google\\.Chrome\\.canary$"
+			"^com\\.apple\\.Safari$"
+			"^com\\.microsoft\\.VSCode$"
+		]
+		:Browsers  [
+			"^org\\.mozilla\\.firefox$"
+			"^org\\.mozilla\\.firefoxdeveloperedition$"
+			"^com\\.google\\.Chrome$"
+			"^org\\.chromium\\.Chromium$"
+			"^com\\.google\\.Chrome\\.canary$"
+			"^com\\.apple\\.Safari$"
+		]
+        :Design [
+            "^com\\.adobe\\.Adobe-Animate-2020\\.application$"
+            "^com\\.adobe\\.Photoshop$"
+            "^com\\.adobe\\.illustrator$"
+        ]
+        :Animate [
+            "^com\\.adobe\\.Adobe-Animate-2020\\.application$"
+        ]
+
+	}
+
+
+	:simlayer-threshold 1000
+}
