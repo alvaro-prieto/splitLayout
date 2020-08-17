@@ -244,6 +244,13 @@
           "to" : [ {
             "consumer_key_code" : "display_brightness_decrement"
           } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
+          } ],
           "type" : "basic"
         }, {
           "from" : {
@@ -251,6 +258,13 @@
           },
           "to" : [ {
             "consumer_key_code" : "display_brightness_increment"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         }, {
@@ -260,6 +274,13 @@
           "to" : [ {
             "consumer_key_code" : "mute"
           } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
+          } ],
           "type" : "basic"
         }, {
           "from" : {
@@ -267,6 +288,13 @@
           },
           "to" : [ {
             "consumer_key_code" : "volume_decrement"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         }, {
@@ -276,6 +304,13 @@
           "to" : [ {
             "consumer_key_code" : "volume_increment"
           } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
+          } ],
           "type" : "basic"
         }, {
           "from" : {
@@ -283,6 +318,13 @@
           },
           "to" : [ {
             "consumer_key_code" : "play_or_pause"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         }, {
@@ -292,6 +334,13 @@
           "to" : [ {
             "consumer_key_code" : "rewind"
           } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
+          } ],
           "type" : "basic"
         }, {
           "from" : {
@@ -299,6 +348,13 @@
           },
           "to" : [ {
             "consumer_key_code" : "fastforward"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         }, {
@@ -308,6 +364,13 @@
           "to" : [ {
             "key_code" : "4",
             "modifiers" : [ "left_command", "left_control", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "product_id" : 8584,
+              "vendor_id" : 2321
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         } ]
