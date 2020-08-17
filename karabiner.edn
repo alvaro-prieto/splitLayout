@@ -62,23 +62,23 @@
 
                 ;;--------- FUNCTION KEYS -----------
                 ;; F2 | brightness -
-                [ :f2 :display_brightness_decrement nil ] 
+                [ :f2 :display_brightness_decrement :rgo-split ] 
                 ;; F3 | brightness +
-                [ :f3 :display_brightness_increment nil ] 
+                [ :f3 :display_brightness_increment :rgo-split ] 
                 ;; F5 | mute
-                [ :f5 :mute nil ] 
+                [ :f5 :mute :rgo-split ] 
                 ;; F6 | volume -
-                [ :f6 :volume_decrement nil ] 
+                [ :f6 :volume_decrement :rgo-split ] 
                 ;; F7 | volume +
-                [ :f7 :volume_increment nil ] 
+                [ :f7 :volume_increment :rgo-split ] 
                 ;; F8 | play / pause
-                [ :f8 :play_or_pause nil ] 
+                [ :f8 :play_or_pause :rgo-split ] 
                 ;; F9 | rewind
-                [ :f9 :rewind nil ] 
+                [ :f9 :rewind :rgo-split ] 
                 ;; F10 | fast forward
-                [ :f10 :fastforward nil ] 
+                [ :f10 :fastforward :rgo-split ] 
                 ;; IMP | print screen
-                [ :print_screen :!CTS4 nil ] 
+                [ :print_screen :!CTS4 :rgo-split ] 
             
             ]
         }
