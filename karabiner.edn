@@ -61,6 +61,8 @@
              
 
                 ;;--------- FUNCTION KEYS -----------
+                ;; F1 | F1  (puede parecer superfluo, pero el OS si tienes ativida la casilla de teclas multimedia en preferencias de teclado, lo overrida)
+                [ :f1 :f1 :rgo-split ] 
                 ;; F2 | brightness -
                 [ :f2 :display_brightness_decrement :rgo-split ] 
                 ;; F3 | brightness +
@@ -141,9 +143,10 @@
                 [:##left_option [ ["L2" 1] ["L2_activator" 1] ] :rgo-split {
                     :afterup ["L2" 0]
                     :alone :!Scomma
-                    :delayed { :invoked  ["L2_activator" 0] :canceled ["L2_activator" 0]}
+                   :delayed { :invoked  ["L2_activator" 0] :canceled ["L2_activator" 0]}
                 }]
-                
+
+
                 ;;--------- L2 LEFT HALF -----------
                 ;; < | redo
                 [ :##non_us_backslash  [:!CSz ] ["L2" 1] ]
@@ -385,8 +388,8 @@
 	:devices {
 		:macbook [{:product_id 631 :vendor_id 1452}]
         :rgo-split [{:product_id 8584 :vendor_id 2321}]
-        :rgo-left [{:product_id 8584 :vendor_id 2321 :location_id 336789504}]
-        :rgo-right [{:product_id 8584 :vendor_id 2321 :location_id 336736256}]
+        :rgo-left [{:product_id 8584 :vendor_id 2321 :location_id 343080960}]
+        :rgo-right [{:product_id 8584 :vendor_id 2321 :location_id 343027712}]
 	}
 
 	:applications {
